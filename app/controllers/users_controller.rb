@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-    get '/user/signup' do
+    get '/signup' do
         erb :'users/signup'
     end
 
@@ -10,24 +10,24 @@ class UsersController < ApplicationController
         @u.password = params[:password]
 
         if @u.save
-            redirect '/user/login'
+            redirect '/login'
         else
-            redirect '/user/signup'
+            redirect '/signup'
         end
     end
 
-    get '/user/login' do
+    get '/login' do
         erb :'users/login'
     end
 
     post '/login' do
         login(params[:username], params[:password])
-        redirect '/games/show'
+        redirect '/games'
     end
 
-    get '/user/logout' do
+    get '/logout' do
         logout
-        redirect 'user/login'
+        redirect '/login'
     end
 
 end

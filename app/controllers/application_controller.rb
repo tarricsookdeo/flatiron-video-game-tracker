@@ -26,7 +26,7 @@ class ApplicationController < Sinatra::Base
         session[:username] = user.username
         session[:user_id] = user.id
       else
-        redirect '/user/login'
+        redirect '/login'
       end
     end
 

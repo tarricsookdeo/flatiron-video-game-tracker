@@ -1,6 +1,6 @@
 class GamesController < ApplicationController
 
-    get '/games/show' do
+    get '/games' do
         if logged_in?
             @games = []
             all_games = Game.all
@@ -13,8 +13,10 @@ class GamesController < ApplicationController
 
             erb :'games/index'
         else
-            redirect '/user/login'
+            redirect '/login'
         end
     end
+
+
 
 end
