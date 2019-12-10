@@ -1,23 +1,11 @@
-<div class="container">
-  <header><img src="images/corneal-small.png" class="img-responsive main-image"></header>
-  <div class="col-md-8 col-md-offset-2">
-    <h2>Sinatra Template Default Page</h2>
+<h1 class="text-center pt-5 pb-3">Welcome to Flatiron Game Tracker!</h1>
 
-    <div class="content">
-      <p>Welcome to the Sinatra Template! If you're seeing this page, then everything is working
-      as expected. To get started, delete this file (<code>app/views/welcome.erb)</code> and begin adding
-      your own actions to <code>application_controller.rb</code>. For more information, see the <a href="https://github.com/thebrianemory/corneal">README</a>.</p>
-    </div>
+<p class="text-center">Flatiron Game Tracker allows you to track your video game inventory. You are able to add video games and
+store addition details such as the year or release, rating, and publisher. Before we
+get started, you must first either login, or create an account!</p>
 
-    <div class="sidebar">
-      <h3>Environment</h3>
-      <ul>
-        <li><b>Ruby:</b> <%= RUBY_VERSION %></li>
-        <li><b>Environment:</b> <%= ENV["RACK_ENV"] %></li>
-        <li><b>Server:</b> <%= @env["SERVER_SOFTWARE"] %></li>
-        <li><b>Port:</b> <%= @env["SERVER_PORT"] %></li>
-      </ul>
-    </div>
-
-  </div>
+<div class="row">
+  <div class="col text-center">
+    <a class="btn btn-primary" href="/user/login" role="button">Login</a>
+    <a class="btn btn-danger" href="/user/signup" role="button">Signup</a>
 </div>
