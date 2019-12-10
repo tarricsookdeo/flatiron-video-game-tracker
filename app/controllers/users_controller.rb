@@ -25,4 +25,9 @@ class UsersController < ApplicationController
         redirect '/games/show'
     end
 
+    get '/user/logout' do
+        logout
+        redirect 'user/login'
+    end
+
 end
