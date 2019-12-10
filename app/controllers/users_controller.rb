@@ -20,4 +20,9 @@ class UsersController < ApplicationController
         erb :'users/login'
     end
 
+    post '/login' do
+        login(params[:username], params[:password])
+        redirect '/games/show'
+    end
+
 end
