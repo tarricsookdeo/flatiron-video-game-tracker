@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class GamesController < ApplicationController
 
     get '/games/show' do
         if logged_in?
