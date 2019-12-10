@@ -1,0 +1,6 @@
+### ENVIORNMENT ###
+.vscode
+.DS_Store
+
+### DATABASE ###
+development.sqlite
