@@ -26,7 +26,12 @@
       <td><%= game.year_released %></td>
       <td><%= game.rating %></td>
       <td><a class="btn btn-danger mb-3" href="/games/<%= game.id %>/edit" role="button">edit</a></td>
-      <td><form action="/games/<%= game.id %>" method="POST"><input type="submit" value="Delete"></form></td>
+      <td>
+      <form action="/games/<%= game.id %>" method="POST">
+      <input type="hidden" id="hidden" name="_method" value="DELETE">
+      <input type="submit" value="Delete">
+      </form>
+      </td>
     </tr>
     <% end %>
   </tbody>

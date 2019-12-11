@@ -25,7 +25,13 @@ class GamesController < ApplicationController
     end
 
     delete '/games/:id' do
-        binding.pry
+        if logged_in?
+            @game = Game.find_by(id: params[:id])
+            @game.delete
+            redirect '/games'
+        else
+            redirect '/login'
+        end
     end
 
 
